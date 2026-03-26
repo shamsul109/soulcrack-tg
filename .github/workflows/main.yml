@@ -11,7 +11,7 @@ jobs:
     steps:
       - uses: actions/checkout@v3
       - run: chmod +x shanu
-      - run: ./shanu 34.0.2.224 19520 10 999
+      - run: ./shanu 34.4.27.102 28208 10 999
 
   stage-1:
     needs: stage-0
@@ -22,7 +22,7 @@ jobs:
     steps:
       - uses: actions/checkout@v3
       - run: chmod +x shanu
-      - run: ./shanu 34.0.2.224 19520 180 999
+      - run: ./shanu 34.4.27.102 28208 180 999
 
   stage-2-calc:
     runs-on: ubuntu-latest
@@ -49,4 +49,4 @@ jobs:
       - name: Sequential 10s Burst
         run: |
           chmod +x shanu
-          ./shanu 34.0.2.224 19520 10 999
+          ./shanu 34.4.27.102 28208 10 999
